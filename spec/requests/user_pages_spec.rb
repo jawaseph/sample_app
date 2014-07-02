@@ -1,16 +1,16 @@
 require 'spec_helper'
 
 describe "User pages" do
+
 context "my context", :type => :feature do	
-  subject { page }
+		    it "should have the content 'Sign up'" do
+		      visit signup_path
+		      expect(page).to have_content('Sign up')
+		    end
 
-  describe "signup page" do
-  	context "mycontext", :type => :feature do
-    before { visit signup_path }
-
-    it { should have_content('Sign up') }
-    it { should have_title(full_title('Sign up')) }
-  end
-end
- end
+		    it "should have the title 'Signup'" do
+		      visit signup_path
+		      expect(page).to have_title("Sign up")
+		    end
+		end
 end
