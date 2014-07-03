@@ -136,6 +136,7 @@ describe User do
     it "should have the right microposts in the right order" do
       expect(@user.microposts.to_a).to eq [newer_micropost, older_micropost]
     end
+    
     it "should destroy associated microposts" do
       microposts = @user.microposts.to_a
       @user.destroy
