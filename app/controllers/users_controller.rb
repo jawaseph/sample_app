@@ -28,6 +28,7 @@ before_action :admin_user, only: :destroy
   end
   
   def edit
+    @user = User.find(params[:id])
   end
 
   def update
